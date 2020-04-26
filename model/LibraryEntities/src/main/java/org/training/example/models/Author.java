@@ -8,7 +8,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Author extends Person {
+public class Author extends LibraryEntity {
 
     private static final long serialVersionUID = -7504211983257834919L;
     private String description;

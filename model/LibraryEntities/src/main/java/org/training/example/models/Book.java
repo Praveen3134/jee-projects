@@ -29,7 +29,7 @@ public class Book extends LibraryEntity {
     private String description;
 
     @JsonbProperty("isbn")
-    private int isbn;
+    private long isbn;
 
     @JsonbProperty("noOfPages")
     private int noOfPages;
@@ -64,11 +64,11 @@ public class Book extends LibraryEntity {
 	this.noOfPages = noOfPages;
     }
 
-    public int getIsbn() {
+    public long getIsbn() {
 	return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(long isbn) {
 	this.isbn = isbn;
     }
 

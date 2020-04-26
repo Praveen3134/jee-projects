@@ -9,7 +9,7 @@ import org.training.example.models.Book;
 @Remote
 public interface BookStore {
 
-    public boolean addBook(Book book);
+    public void addBook(Book book);
 
     public Book getBook(String isbn);
 

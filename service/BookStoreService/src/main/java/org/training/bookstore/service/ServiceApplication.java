@@ -13,6 +13,7 @@ public class ServiceApplication extends Application {
     public Set<Class<?>> getClasses() {
 	Set<Class<?>> set = new HashSet<Class<?>>();
 	set.add(BookStoreService.class);
+	set.add(UserService.class);
 	return set;
     }
 }

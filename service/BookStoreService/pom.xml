@@ -29,15 +29,21 @@
   </build>
   <dependencies>
   	<dependency>
-  		<groupId>org.training.store</groupId>
+  		<groupId>javax</groupId>
+  		<artifactId>javaee-api</artifactId>
+  		<version>8.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.training.example</groupId>
   		<artifactId>Bookstore-ejb</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   		<type>ejb</type>
   	</dependency>
   	<dependency>
-  		<groupId>javax</groupId>
-  		<artifactId>javaee-api</artifactId>
-  		<version>8.0</version>
+  		<groupId>org.jboss.resteasy</groupId>
+  		<artifactId>resteasy-multipart-provider</artifactId>
+  		<version>3.7.0.Final</version>
+  		<scope>provided</scope>
   	</dependency>
   </dependencies>
 </project>

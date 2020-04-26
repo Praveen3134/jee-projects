@@ -2,9 +2,11 @@ package org.training.example.models;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -15,6 +17,10 @@ public class Person extends LibraryEntity {
     private String userName;
     private String password;
     private String phoneNo;
+
+    @Lob
+    @Column(name = "UserPic")
+    private byte[] imageData;
 
     @OneToMany(mappedBy = "person")
     private List<Address> addresses;
@@ -41,6 +47,26 @@ public class Person extends LibraryEntity {
 
     public String getPhoneNo() {
 	return this.phoneNo;
+    }
+
+    public byte[] getImageData() {
+	return imageData;
+    }
+
+    public void setImageData(byte[] imageData) {
+	this.imageData = imageData;
+    }
+
+    public List<Address> getAddresses() {
+	return addresses;
+    }
+
+    public void addAddresses(Address address) {
+	this.addresses.add(address);
+    }
+
+    public void removeAddresses(Address address) {
+	this.addresses.remove(address);
     }
 
     public void setPhoneNo(String phoneNo) {

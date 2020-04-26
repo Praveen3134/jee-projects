@@ -22,7 +22,7 @@ import javax.ws.rs.core.Response;
 import org.training.bookstore.ejb.BookStore;
 import org.training.example.models.Book;
 
-@Path("/")
+@Path("/bookService")
 public class BookStoreService {
 
     @EJB
@@ -46,15 +46,17 @@ public class BookStoreService {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public String addBookToStore(MultivaluedMap<String, String> bookData) {
 	Book book = new Book();
-	book.setName(bookData.get("title").get(0));
+	book.setName(bookData.get("name").get(0));
 //	book.setAuthor(bookData.get("author").get(0));
 	book.setDescription(bookData.get("description").get(0));
 	book.setPrice(Float.parseFloat(bookData.get("price").get(0)));
 	book.setLanguage(bookData.get("language").get(0));
+	book.setLanguage(bookData.get("isbn").get(0));
+	book.setLanguage(bookData.get("noOfPages").get(0));
 
-	boolean bookAdded = store.addBook(book);
+	store.addBook(book);
 
-	return Response.ok(bookAdded).build().toString();
+	return Response.ok().build().toString();
     }
 
     @GET
