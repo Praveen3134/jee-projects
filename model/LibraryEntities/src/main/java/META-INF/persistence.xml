@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="LibraryEntities">
+	<jta-data-source>java:jboss/datasource/MySqlDS</jta-data-source>
+	   <!--class>org.training.example.models.Address</class>
+	   <class>org.training.example.models.Author</class>
+	   <class>org.training.example.models.Book</class>
+	   <class>org.training.example.models.LentRecord</class>
+	   <class>org.training.example.models.Librarian</class>
+	   <class>org.training.example.models.LibraryMember</class>
+	   <class>org.training.example.models.Row</class>
+	   <class>org.training.example.models.Section</class-->
+	   <properties>
+		  <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+		  <!--property name="javax.persistence.schema-generation.create-source" value="script"/>
+        	<property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create.sql" />
+        	<property name="javax.persistence.sql-load-script-source" value="META-INF/sql/data.sql" />
+        	<property name="javax.persistence.schema-generation.drop-source" value="script" />
+        	<property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop.sql" /-->
+	   </properties>
+	</persistence-unit>
+</persistence>
