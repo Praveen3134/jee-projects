@@ -1,0 +1,2 @@
+org\training\bookstore\ejb\BookStore.class
+org\training\bookstore\ejb\impl\BookStoreBean.class
